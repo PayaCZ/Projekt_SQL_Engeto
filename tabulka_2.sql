@@ -8,8 +8,9 @@ CREATE TABLE t_pavel_smid_projekt_SQL_secondary_final AS
 SELECT 
 	e.country AS country_economies, 
 	e.`year`, 
-	e.GDP
+	e.GDP,
+	e.gini,
+	e.population
 FROM economies e
 LEFT JOIN countries c ON e.country = c.country
-WHERE e.country = 'Czech Republic'
-	AND e.GDP IS NOT NULL ;
+WHERE e.GDP IS NOT NULL ;
