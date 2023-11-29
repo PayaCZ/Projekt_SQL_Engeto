@@ -7,6 +7,10 @@ discord: Pavel Šmíd#2969
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+Zde jsou připraveny datové podklady pro definované výzkumné otázky, které adresují dostupnost základních potravin široké veřejnosti. V těchto datových podkladech je možné vidět porovnání dostupnosti potravin na základě průměrných příjmů za určité časové období, dále HDP, GINI koeficient a počet populace dalších evropských států ve stejném období, jako primární přehled pro ČR.   
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 Popis vytvořené tabulky č.1:
