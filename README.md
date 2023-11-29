@@ -196,10 +196,10 @@ Analýza může poskytnout užitečné informace pro pochopení možné korelace
 
 
 Vztah mezi růstem HDP a růstem cen potravin:
-Z grafu lze vyčíst, že v některých letech s výrazným růstem HDP (např. v roce 2017) se objevuje také výraznější růst cen potravin ve stejném nebo následujícím roce.
+Z dat  lze vyčíst, že v některých letech s výrazným růstem HDP (např. v roce 2017) se objevuje také výraznější růst cen potravin ve stejném nebo následujícím roce.
 
 Vztah mezi růstem HDP a růstem mezd:
-Opět z grafu vyplývá, že v letech s výrazným růstem HDP existuje tendence k výraznějšímu růstu mezd ve stejném nebo následujícím roce.
+Opět z tabulky s daty vyplývá, že v letech s výrazným růstem HDP existuje tendence k výraznějšímu růstu mezd ve stejném nebo následujícím roce.
 
 Porovnání růstu cen potravin a mezd:
 Na základě dat z tabulky lze pozorovat, že změny cen potravin a mezd nejsou vždy úměrné, ale občas může být pozorován nějaký vztah.
