@@ -88,6 +88,13 @@ Závěr:
 
 Kód analyzuje průměrné mzdy v různých odvětvích během let a poskytuje výsledky v podobě procentuální změny v průměrných mzdách mezi aktuálním rokem a předchozím rokem pro každé odvětví. Výsledky jsou seřazeny podle procentuální změny od největší k nejmenší.
 
+S dat vyplívá, že profese: 
+Velkoobchod a maloobchod; opravy a údržba motorových vozidel, 
+Kulturní, zábavní a rekreační činnosti, 
+Stavebnictví
+klesla v roce 2021 průměrná hrubá mzda o 25% až 30%.
+Dalo by se říci, že po covidové pandemii klesly mzdy o nejvíce procent za měřené období, což je od roku 2000 až do roku 2021.
+
 Takto strukturovaná analýza umožňuje identifikovat odvětví, kde došlo k významným změnám v průměrných mzdách a poskytuje přehled o celkovém trendu růstu nebo poklesu v jednotlivých odvětvích. Tímto způsobem lze snáze identifikovat ekonomické trendy a přijmout informovaná rozhodnutí v oblasti pracovních sil a investic.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
