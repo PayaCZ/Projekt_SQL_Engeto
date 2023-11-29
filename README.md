@@ -11,7 +11,7 @@ discord: Pavel Šmíd#2969
 
 Popis vytvořené tabulky č.1:
 
-Tabulka t_pavel_smid_projekt_SQL_primary_final byla vytvořena pro shromáždění dat o mzdách a cen potravin za Českou republiku. Tato tabulka slouží k porovnání dat mezd a cen potravin, která jsou sjednocena na totožné porovnatelné období, tj. pro společné roky.
+Tabulka t_pavel_smid_projekt_SQL_primary_final byla vytvořena pro shromáždění dat o mzdách a cen potravin za Českou republiku. Tato tabulka slouží k porovnání mezd a cen potravin, která jsou sjednocena na totožné porovnatelné období, tj. pro společné roky.
 
 Struktura tabulky:
 
@@ -38,33 +38,26 @@ Tato tabulka umožňuje snadné porovnání meziročních změn mezd a cen potra
 
 Popis vytvořené tabulky č.2:
 
-Tabulka t_pavel_smid_projekt_SQL_secondary_final byla vytvořena pro shromáždění dodatečných dat o České republice z tabulek economies a countries. Tato tabulka slouží k poskytnutí dalších informací o ekonomických a demografických aspektech pro Českou republiku.
+Tabulka t_pavel_smid_projekt_SQL_secondary_final byla vytvořena pro shromáždění dodatečných dat o České republice z tabulek economies a countries. Tato tabulka slouží k poskytnutí dalších informací o ekonomických  aspektech pro Českou republiku.
 
 Struktura tabulky:
 
-country_economies: Sloupec obsahuje název země (v tomto případě Česká republika) z tabulky economies.
+country_economies: Sloupec obsahuje název země z tabulky economies.
 
 year: Sloupec obsahuje rok, ke kterému se data vztahují. Identifikuje konkrétní rok sledovaný v tabulce economies.
 
-GDP: Sloupec obsahuje hodnotu hrubého domácího produktu (GDP) pro Českou republiku v daném roce.
+GDP: Sloupec obsahuje hodnotu hrubého domácího produktu (GDP) v daném roce.
 
-population_economies: Sloupec obsahuje hodnotu populace pro Českou republiku v daném roce z tabulky economies.
+gini: Tento sloupec obsahuje informace o Giniho koeficientu, který měří míru nerovnosti příjmů v dané zemi.
 
-gini: Sloupec obsahuje hodnotu Giniho indexu pro měření nerovnosti příjmů v České republice v daném roce.
+population: Tento sloupec obsahuje informace o populaci dané země.
 
-taxes: Sloupec obsahuje informace o daních v České republice v daném roce.
-
-fertility: Sloupec obsahuje hodnotu míry plodnosti v České republice v daném roce.
-
-mortality_under5: Sloupec obsahuje hodnotu úmrtnosti dětí do 5 let v České republice v daném roce.
-
-c.*: Sloupce obsahující informace o zemi (např. country, region, religion) z tabulky countries.
 
 Vytvoření tabulky:
 
 Tabulka byla vytvořena pomocí příkazu CREATE TABLE a spojením dat z tabulek economies a countries na základě odpovídajícího klíče country. Při výběru dat byla provedena podmínka, která omezila výběr na Českou republiku.
 
-Tato tabulka poskytuje komplexní soubor dat o České republice, který zahrnuje ekonomické, demografické a geografické informace. Je vhodná pro analýzu a srovnání s dalšími evropskými státy.
+Tato tabulka poskytuje soubor dat o České republice, který zahrnuje ekonomické informace. Je vhodná pro analýzu a srovnání s dalšími evropskými státy.
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -106,17 +99,16 @@ Vysvětlení kódu:
 
 Výběr relevantních dat: Používáme spojení (JOIN) mezi tabulkou t_pavel_smid_projekt_sql_primary_final a czechia_price_category, abychom získali relevantní informace o cenách a mzdách potravinových kategorií.
 
-Výpočet množství litrů/mléka a kilogramů/chleba: Pro každou kategorii potravin (category_code) vypočítáváme, kolik litrů mléka a kilogramů chleba je možné si koupit za první (2006) a poslední (2018) srovnatelné období. Výpočet je proveden jako poměr průměrné mzdy k minimální a maximální ceně dané kategorie.
+Výpočet množství litrů/mléka a kilogramů/chleba: Pro každou kategorii potravin (category_code) vypočítáváme, kolik litrů mléka a kilogramů chleba je možné si koupit za první rok 2006 a poslední rok 2018 srovnatelné období. Výpočet je proveden jako poměr průměrné mzdy k minimální a maximální ceně dané kategorie.
 
 Zaokrouhlování: Výsledky jsou zaokrouhlovány na dvě desetinná místa.
 
 Filtrace dat: Omezujeme výběr na konkrétní kategorie potravin (kód 114201 pro mléko a 111301 pro chléb).
 
-Řazení výsledků: Výsledky jsou řazeny podle kategorie potravin sestupně.
 
 Závěr:
 
-Tímto způsobem kód poskytuje informace o tom, kolik litrů mléka a kilogramů chleba bylo     možné si koupit za první a poslední srovnatelné období na základě průměrných mezd a cen.
+Tímto způsobem kód poskytuje informace o tom, kolik litrů mléka a kilogramů chleba bylo     možné si koupit za první a poslední srovnatelné období na základě průměrných mezd a cen. Bylo zjištěno, že v roce 2006 bylo možné si koupit 1411 litrů polotučného pasterizovaného mléka a 1264 kusů konzumního kmínového chleba. Za to v roce 2018, 1545 litrů polotučného pasterizovaného mléka a 1319 kusů konzumního kmínového chleba.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -139,7 +131,8 @@ Filtrace dat: Filtrace dat pro odstranění neplatných hodnot.
 
 Závěr:
 
-Kód provedl analýzu meziročního nárůstu cen potravin v různých kategoriích. Z výsledků vyplývá, která kategorie potravin zdražuje nejpomaleji, tj. má nejnižší procentuální meziroční nárůst.
+Kód provedl analýzu meziročního nárůstu cen potravin v různých kategoriích. Z výsledků vyplývá, že kategorie 117101 Rajská jablka červená kulata zdražují nejpomaleji ba naopak v jistých letech (2007, 2008, 2011) cena klesá až o 30%.  
+
 Tato analýza může být užitečná pro spotřebitele i obchodníky, kteří chtějí sledovat, jak se vyvíjí ceny potravin v různých kategoriích. Identifikace kategorií s nižším procentuálním růstem může pomoci při plánování nákupů a rozhodování o strategiích cenové politiky.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -205,7 +198,7 @@ Vztah mezi růstem HDP a růstem mezd:
 Opět z grafu vyplývá, že v letech s výrazným růstem HDP existuje tendence k výraznějšímu růstu mezd ve stejném nebo následujícím roce.
 
 Porovnání růstu cen potravin a mezd:
-Na základě grafu lze pozorovat, že změny cen potravin a mezd nejsou vždy úměrné, ale občas může být pozorován nějaký vztah.
+Na základě dat z tabulky lze pozorovat, že změny cen potravin a mezd nejsou vždy úměrné, ale občas může být pozorován nějaký vztah.
 
 
 
