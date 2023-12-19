@@ -9,7 +9,7 @@ SELECT
  	cpc.name AS food_name, 
  	round((SELECT avg(tp.value_payroll) FROM t_pavel_smid_projekt_sql_primary_final tp  
         WHERE payroll_year = 2006 ) / min(tp.value)) AS liters_pieces_2006, 
-        round((SELECT avg(tp.value_payroll) FROM t_pavel_smid_projekt_sql_primary_final tp  
+        round((SELECT avg(tp.value_payroll) FROM t_pavel_smid_projekt_SQL_primary_final tp  
         WHERE payroll_year = 2018 ) / max(tp.value)) AS liters_pieces_2018
 FROM t_pavel_smid_projekt_SQL_primary_final tp
 JOIN czechia_price_category cpc 
