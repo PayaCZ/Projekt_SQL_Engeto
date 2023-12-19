@@ -1,6 +1,6 @@
 -- Tabulka 2)
 -- t_{jmeno}_{prijmeni}_project_SQL_secondary_final 
--- (tabulky countries , economies pro dodatečná data o České republice).
+-- (tabulky countries , economies pro dodatečná data o dalších evropských státech).
 -- --------------------------------------------------
 
 
