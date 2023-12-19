@@ -15,8 +15,8 @@ SELECT
     	OVER (ORDER BY tp.payroll_year) * 100, 2) AS difference_percentage, tp2.GDP, 
     	round((AVG(tp2.GDP) - lag(avg(tp2.GDP)) OVER (ORDER BY tp2.GDP)) / lag(avg(tp2.GDP)) 
     	OVER (ORDER BY tp.payroll_year) * 100, 2) AS gdp_increase_percentage
-FROM t_pavel_smid_projekt_sql_primary_final tp
-LEFT JOIN t_pavel_smid_projekt_sql_secondary_final tp2 
+FROM t_pavel_smid_projekt_SQL_primary_final tp
+LEFT JOIN t_pavel_smid_projekt_SQL_secondary_final tp2 
 	ON tp.payroll_year = tp2.`year`
 WHERE tp.payroll_year BETWEEN 2006 AND 2018
 GROUP BY tp.payroll_year;
