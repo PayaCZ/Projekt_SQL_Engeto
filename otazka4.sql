@@ -14,7 +14,7 @@ SELECT
     	OVER (ORDER BY tp.payroll_year) * 100, 2) -
     	round((avg(tp.value_payroll) - lag(avg(tp.value_payroll)) OVER (ORDER BY tp.payroll_year)) / lag(avg(tp.value_payroll)) 
     	OVER (ORDER BY tp.payroll_year) * 100, 2) AS difference_percentage
-FROM t_pavel_smid_projekt_sql_primary_final tp
+FROM t_pavel_smid_projekt_SQL_primary_final tp
 WHERE tp.payroll_year BETWEEN 2006 AND 2018
 GROUP BY tp.payroll_year
 ORDER BY difference_percentage DESC;
