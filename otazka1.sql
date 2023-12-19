@@ -9,7 +9,7 @@ WITH value_data AS (
     	round(avg(value_payroll)) AS value_payroll, 
     	lag(avg(value_payroll)) OVER (PARTITION BY industry_branch_code
 	ORDER BY payroll_year) AS prev_value
-    FROM t_pavel_smid_projekt_sql_primary_final
+    FROM t_pavel_smid_projekt_SQL_primary_final
     GROUP BY  payroll_year, industry_branch_code 
 )
 SELECT 
