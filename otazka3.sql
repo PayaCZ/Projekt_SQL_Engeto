@@ -10,7 +10,7 @@ WITH price_data AS (
     	cpc.name AS food_name, 
     	lag(avg(tp.value)) OVER (PARTITION BY tp.category_code
 	ORDER BY payroll_year) AS prev_price
-    FROM t_pavel_smid_projekt_sql_primary_final tp
+    FROM t_pavel_smid_projekt_SQL_primary_final tp
     LEFT JOIN czechia_price_category cpc 
 	ON tp.category_code = cpc.code
 GROUP BY  payroll_year, tp.category_code, cpc.name
